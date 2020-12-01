@@ -68,3 +68,11 @@ class CityMap:
 
     def save(self, file_path):
         np.save(file_path, self.city_map)
+
+    def save_one(self, file_path):
+        print(self.city_map)
+        for i in self.city_map[0].keys():
+            self.city_map[i][self.node_number] = self.city_map[i].pop(0)
+        self.city_map[self.node_number] = self.city_map.pop(0)
+        print(self.city_map)
+        self.save(file_path)

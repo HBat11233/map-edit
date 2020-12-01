@@ -10,7 +10,7 @@ if __name__ == '__main__':
     car_trajectory = CarTrajectory(100,5,15,30,18000,city_map)
     city_map.build()
     car_trajectory.build()
-    city_map.save("2.txt")
+    city_map.save_one("2.txt")
     car_trajectory.save("1.txt")
 
 
